@@ -21,12 +21,18 @@ class HomeController extends Controller
 //        }
 
         // remember
-        $products = Cache::remember('allProducts', 300, function() {
-            return Products::latest()->take(9)->get();
-        });
+//        $products = Cache::remember('allProducts', 300, function() {
+//            return Products::latest()->take(9)->get();
+//        });
 
-         return view('welcome', [
-             'products' => $products
-         ]);
+//        $products = Cache::remember('allProducts', 300,
+//            fn() => Products::latest()->take(9)->get()
+//        );
+
+         //
+         // logika bez varijable $products
+        return view('welcome', [
+            'products' => Cache::remember('allProducts', 300, fn() => Products::latest()->take(9)->get())
+        ]);
     }
 }

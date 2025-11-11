@@ -12,6 +12,7 @@ class ProductsController extends Controller
     public function create(CreateProductRequest $request)
     {
         Products::create($request->validated());
+        Cache::forget('allProducts');
 
         return redirect()->back()->with('success', 'Product created!');
     }

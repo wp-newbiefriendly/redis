@@ -27,6 +27,7 @@
         <input type="number" id="price" name="price" min="0" required>
 
         <input type="submit" value="Pošaljite">
+        <a href="/" class="btn btn-primary text-center mx-auto">Nazad na pocetnu</a>
     </form>
 </div>
 
