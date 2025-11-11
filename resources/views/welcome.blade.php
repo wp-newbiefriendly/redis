@@ -19,6 +19,7 @@
             </style>
         @endif
     </head>
+<<<<<<< HEAD
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
         <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
             @if (Route::has('login'))
@@ -275,3 +276,49 @@
         @endif
     </body>
 </html>
+=======
+<body>
+@if (session('success'))
+    <div class="alert alert-success text-center mx-auto">
+        {{ session('success') }}
+    </div>
+@endif
+
+@foreach($products as $product)
+    <div class="product">
+        <h1 class="product-name">{{ $product->name }}</h1>
+        <p class="product-description">{{ $product->description }}</p>
+        <p class="product-price">{{ $product->price }} RSD</p>
+    </div>
+@endforeach
+
+</body>
+</html>
+<style>
+    .product {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
+
+    .product-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .product-description {
+        font-size: 16px;
+        color: #555;
+        margin: 10px 0;
+    }
+
+    .product-price {
+        font-size: 18px;
+        color: #007bff;
+        font-weight: bold;
+    }
+</style>
+>>>>>>> 8266db9b9b3e89b6ff8a9ca33b000eff4764f954

@@ -22,3 +22,10 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+<<<<<<< HEAD
+=======
+
+# Project exclude paths
+/storage/app/
+/storage/framework/
+>>>>>>> 8266db9b9b3e89b6ff8a9ca33b000eff4764f954
