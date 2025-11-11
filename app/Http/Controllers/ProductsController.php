@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateProductRequest;
 use App\Models\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ProductsController extends Controller
 {
@@ -13,5 +14,10 @@ class ProductsController extends Controller
         Products::create($request->validated());
 
         return redirect()->back()->with('success', 'Product created!');
+    }
+    public function flush()
+    {
+        Cache::forget('allProducts');
+        return redirect('/')->with('success', 'Cache cleared!');
     }
 }
