@@ -21,7 +21,7 @@
                         @csrf
                         <div class="mb-4">
                             <input type="file" name="profile_image" id="profile_image" accept="image/*" class="mt-1 block w-full text-sm text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
-                            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">PNG, JPG, or JPEG (Max 2MB)</p>
+                            <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">PNG, JPG, JPEG, WEBP (Max 8MB)</p>
                         </div>
 
                         <div class="flex justify-end">

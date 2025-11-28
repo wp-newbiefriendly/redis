@@ -23,7 +23,7 @@ class ProfileController extends Controller
 
     public function changeAvatar(Request $request)
     {
-    dd($request->all());
+    dd($request->validate());
     }
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
